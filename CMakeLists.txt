@@ -3,4 +3,6 @@ project(Pendu C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Pendu main.c)
+add_executable(Pendu main.c
+        Pendu.h
+        Pendu.c)
