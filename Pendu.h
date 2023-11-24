@@ -1,19 +1,21 @@
 //
-// Created by Oussaama Ammar El Idrissi on 17/11/2023.
+// Created by aboudaay on 17/11/2023.
 //
 
 #ifndef PENDU_PENDU_H
 #define PENDU_PENDU_H
 #include <stdlib.h>
 #include <string.h>
-#define MAX_LEN 15 // constante
+#include<stdbool.h>
+#define MAX_LEN 15
+//#define life 6
 
 // Declaration of the global array
 extern char tab[100][MAX_LEN];
 
 // Function declaration
-void afficherCadre();
-void afficherPendu();
 char* Word(char tab[100][MAX_LEN]);
-void Mot_Cache(char* res);
+void Mot_Cache(char* res,char* tmp);
+void deviner(char* res, char* tmp, bool* verif) ;
+
 #endif //PENDU_PENDU_H
