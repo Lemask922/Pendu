@@ -307,13 +307,31 @@ void Mot_Cache(char* res, char* tmp)
 
 void deviner(char* res, char* tmp, bool* verif) {
     char Lettre;
+
     *verif = false;
 
     printf("Saisir une lettre : \n");
-    scanf(" %c", &Lettre);
+
+    while (1) {
+        if (scanf(" %c", &Lettre) != 1 || getchar() != '\n') {
+            // Invalid input (not a single character)
+            printf("Veuillez saisir une seule lettre.\n");
+            // Clear the input buffer
+            while (getchar() != '\n');
+        } else if (!isalpha(Lettre)) {
+            // Invalid input (not an alphabet letter)
+            printf("Veuillez saisir une lettre valide.\n");
+        } else {
+            // Valid input
+            break;
+        }
+    }
+
+    Lettre = toupper(Lettre);
+
 
     for (int i = 0; i < strlen(res); i++) {
-        if (toupper(Lettre) == toupper(res[i])) {
+        if (Lettre == toupper(res[i])) {
             tmp[i] = res[i];
             *verif = true;
         }
@@ -323,6 +341,8 @@ void deviner(char* res, char* tmp, bool* verif) {
         printf("La lettre %c n'est pas dans le mot.\n", Lettre);
     }
 }
+
+
 
 void dessine_pendu(int life ) {
     switch (life)
