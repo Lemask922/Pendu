@@ -7,6 +7,7 @@
 #include<string.h>
 #include <time.h>
 #include <ctype.h>
+#include "./raylib-master/src/raylib.h"
 
 //Thème ANIMAUX
 char animauxFacile[50][15] = {
@@ -344,7 +345,7 @@ void deviner(char* res, char* tmp, bool* verif) {
 
 
 
-void dessine_pendu(int life ) {
+void dessine_pendu(int life) {
     switch (life)
     {
         case 6:
@@ -417,6 +418,30 @@ void dessine_pendu(int life ) {
             break;
     }
 }
+    //startScreen,
+    //levelScreen,
+    //topicScreen,
+    //penduScreen
+    void startScreen() {
+        while (!WindowShouldClose()) {
+            // Draw
+            BeginDrawing();
+            ClearBackground(RAYWHITE);
+            DrawText("Welcome to Pendu", 50, 100, 30, BLACK);
+            DrawText("Instructions:", 50, 150, 20, BLACK);
+            DrawText("- Guess the hidden word by entering letters.", 50, 180, 20, BLACK);
+            DrawText("- You have 6 lives. Each incorrect guess costs a life.", 50, 210, 20, BLACK);
+            DrawText("- Try to guess the word before running out of lives.", 50, 240, 20, BLACK);
+            EndDrawing();
+        }
+    }
+
+    void levelScreen()
+    {
+
+    }
+
+
 //
 // Created by Abouda on 23/11/2023.
 //
