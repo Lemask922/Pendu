@@ -422,7 +422,7 @@ void dessine_pendu(int life) {
     //levelScreen,
     //topicScreen,
     //penduScreen
-    void startScreen() {
+    void startScreens() {
         while (!WindowShouldClose()) {
             // Draw
             BeginDrawing();
@@ -434,11 +434,16 @@ void dessine_pendu(int life) {
             DrawText("- Try to guess the word before running out of lives.", 50, 240, 20, BLACK);
             EndDrawing();
         }
+        CloseWindow();
     }
 
-    void levelScreen()
+    void levelScreens()
     {
+        while (!WindowShouldClose()) {
+            // Draw
+            BeginDrawing();
 
+            EndDrawing();
     }
 
 

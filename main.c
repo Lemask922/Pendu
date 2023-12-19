@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include <stdio.h>
 #include"Pendu.h"
-
 #include<string.h>
 #include"./raylib-master/src/raylib.h"
 #define MAX_INPUT_CHARS 1
@@ -17,27 +16,26 @@ int main() {
 
     InitWindow(screenWidth, screenHeight, "Welcome to Pendu");
 
-
-
         gameScreen currentScreen = startScreen;
         switch (currentScreen) {
+            case startScreen :
+                startScreens();
+                break;
             case levelScreen:
-                levelScreen();
+                printf(" test ");
                 break;
             case topicScreen:
+                printf(" test ");
                 break;
             case penduScreen:
+                printf(" test ");
                 break;
             defaut :
-                startScreen;
-            break;
+                startScreens();
         }
-
-
-        EndDrawing();
     }
 
-    CloseWindow();  // Close the welcome window
+
 
 
 
@@ -156,10 +154,5 @@ int i = 0;
         printf("Taper 0 si vous voulez quittez le jeu \n");
         scanf("%d",&Play);
     }
-
-
-
-
-
     return 0;
 }
