@@ -26,12 +26,19 @@ extern char filmsDifficile[50][MAX_LEN];
 // Function declaration
 char* Word(char tab[50][MAX_LEN]);
 void Mot_Cache(char* res,char* tmp);
+void Settings(int theme,int lvl,char* res);
 void deviner(char* res, char* tmp, bool* verif);
-        void dessine_pendu(int life);
+void game(int i,char* res,char tmp[MAX_LEN + 1],int life,bool* verif);
+void dessine_pendu(int life);
 int niveau_jeu();
 int sujet();
 
 
-
+enum GameState {
+    WELCOME_SCREEN,
+    LEVEL_SELECTION_SCREEN,
+    THIRD_WINDOW,
+    game_window
+};
 
 #endif //PENDU_PENDU_H

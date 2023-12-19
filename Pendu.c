@@ -7,6 +7,8 @@
 #include<string.h>
 #include <time.h>
 #include <ctype.h>
+#include "/Users/abouda/Desktop/Esiea/Project CCCCCC/raylib-master/src/raylib.h"
+
 
 //Thème ANIMAUX
 char animauxFacile[50][15] = {
@@ -305,6 +307,69 @@ void Mot_Cache(char* res, char* tmp)
     tmp[L] = '\0';
 }
 
+void Settings(int theme,int lvl,char* res)
+{
+    switch (theme) {
+        case 1:
+            switch (lvl) {
+
+                case 1:
+                    res = Word(animauxFacile);
+                    break;
+
+                case 2:
+                    res = Word(animauxMoyen);
+                    break;
+                case 3:
+                    res = Word(animauxDifficile);
+                    break;
+
+                default:
+                    printf("Erreur causé au niveau du thème animaux, des niveaux");
+                    break;
+            }
+
+            break;
+
+        case 2:
+            switch (lvl) {
+
+                case 1:
+                    res = Word(villesFacile);
+                    break;
+
+                case 2:
+                    res = Word(villesMoyen);
+                    break;
+                case 3:
+                    res = Word(villesDifficile);
+                    break;
+                default:
+                    printf("Erreur causé au niveau du thème villes, des niveaux");
+                    break;
+            }
+            break;
+        case 3:
+            switch (lvl) {
+
+                case 1:
+                    res = Word(filmsFacile);
+                    break;
+
+                case 2:
+                    res = Word(filmsMoyen);
+                    break;
+                case 3:
+                    res = Word(filmsDifficile);
+                    break;
+                default:
+                    printf("Erreur causé au niveau du thème films, des niveaux");
+                    break;
+            }
+            break;
+    }
+}
+
 void deviner(char* res, char* tmp, bool* verif) {
     char Lettre;
 
@@ -341,8 +406,6 @@ void deviner(char* res, char* tmp, bool* verif) {
         printf("La lettre %c n'est pas dans le mot.\n", Lettre);
     }
 }
-
-
 
 void dessine_pendu(int life ) {
     switch (life)
