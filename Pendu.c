@@ -122,181 +122,35 @@ char filmsDifficile[50][15] = {
         "Léon", "Wasabi", "Lucy", "Family", "Gandahar",
         "Time Masters", "Fantastic P", "Delicatessen", "City Lost Ch", "Amélie"
 };
-
-
-
-
-/* char tab1[100][15] = {    //tableau 2 dimension 100 éléments,15 caractères
-        "Aventure", "Énigme", "Mystère", "Fantaisie", "Magie",
-        "Labyrinthe", "Exploration", "Evasion", "Conquête", "Héros",
-        "Légende", "Trésor", "Épique", "Sirène", "Chimère",
-        "Dragon", "Sorcellerie", "Quête", "Enchanté", "Alliance",
-        "Potion", "Courage", "Voyage", "Oracle", "Destin",
-        "Illusion", "Éclat", "Renaissance", "Sagesse", "Vision",
-        "Harmonie", "Création", "Insolite", "Incantation", "Rêverie",
-        "Odyssée", "Phénix", "Portail", "Révélation", "Harmonie",
-        "Destinée", "Éclipse", "Miraculeux", "Persévérance", "Fraternité",
-        "Merveille", "Secret", "Nirvana", "Vortex", "Mirage",
-        "Esprit", "Mirage", "Illimité", "Extase", "Divin",
-        "Délire", "Astre", "Mirage", "Illimité", "Extase",
-        "Divin", "Délire", "Astre", "Mirage", "Illimité",
-        "Extase", "Divin", "Délire", "Astre", "Mirage",
-        "Illimité", "Extase", "Divin", "Délire", "Astre",
-        "Mirage", "Illimité", "Extase", "Divin", "Délire",
-        "Astre", "Mirage", "Illimité", "Extase", "Divin",
-        "Délire", "Astre", "Mirage", "Illimité", "Extase",
-        "Divin", "Délire", "Astre", "Mirage", "Illimité",
-        "Extase", "Divin", "Délire", "Astre", "Mirage"
-};
-char tab2[100][15] = {
-        "Aquarelle", "Balise", "Cactus", "Eclipse",
-        "Fauvette", "Girafe", "Haricot", "Iguane", "Jasmin",
-        "Koala", "Lanterne", "Mouette", "Nénuphar", "Orchidée",
-        "Papaye", "Quartz", "Racine", "Safran", "Tamarin",
-        "Uranium", "Voyage", "Wapiti", "Xénophile", "Yucca",
-        "Zéphyr", "Aquarium", "Brocoli", "Cygne", "Dynamite",
-        "Embrun", "Fenouil", "Grenade", "Hibou", "Iris",
-        "Jonquille", "Kaki", "Lilas", "Mangue", "Nectar",
-        "Olivier", "Pamplemousse", "Quiche", "Radis", "Sorbet",
-        "Tabouret", "Ustensile", "Vinaigre", "Walabi", "Xylophone",
-        "Yoga", "Zodiaque", "Avocat", "Bretzel", "Cyclone",
-        "Dromadaire", "Esturgeon", "Flamant", "Gazelle", "Horloge",
-        "Indigo", "Jacinthe", "Kiwi", "Limonade", "Moustache",
-        "Nougat", "Oasis", "Paon", "Quinoa", "Ratatouille",
-        "Salamandre", "Tortue", "Ukulélé", "Vanille", "Wagon",
-        "Xérès", "Yakitori", "Zèbre", "Armadillo", "Bungalow",
-        "Cantaloup", "Dragon", "Escalope", "Festival", "Girouette",
-        "Hérisson", "Insulaire", "Javelot", "Kimono", "Lavande",
-        "Mandoline", "Narval", "Oeillet", "Pélican", "Quetzal",
-        "Ravioli", "Saxophone", "Tournesol", "Urchin", "Vermicelle",
-        "Wallaby"
-};
-
-char tab3[100][15] = { "Abracadabra", "Baccalauréat", "Chlorophylle", "Déshydratant", "Electrochoc",
-                    "Francophile", "Glaciologie", "Héliocentrique", "Iconoclaste", "Juridiction",
-                    "Kaleidoscope", "Labyrinthique", "Métamorphose", "Nanotechnologie", "Oxygénation",
-                    "Parachutisme", "Quadrilatère", "Radiographie", "Synthétiseur", "Trigonometrie",
-                    "Ultraviolet", "Vaccination", "Wolfram", "Xylophone", "Yacht",
-                    "Zootechnique", "Amphibien", "Bioluminescent", "Cryptographie", "Dynamomètre",
-                    "Encyclopédie", "Fluorescent", "Géographique", "Hippopotame", "Informatique",
-                    "Juxtaposer", "Kilométrique", "Lymphatique", "Microscope", "Narcissique",
-                    "Omnipotent", "Paléontologie", "Quintessence", "Rhinocéros", "Sismologie",
-                    "Télékinésie", "Urbanisation", "Ventriloque", "Wagon-lit", "Xénophobie",
-                    "Yin-yang", "Zoologie", "Accélérateur", "Bourdonnement", "Chronomètre",
-                    "Désinfectant", "Ectoplasme", "Fibromyalgie", "Gouvernail", "Hydraulique",
-                    "Impression", "Jurisprudence", "Logarithme", "Mécanique",
-                    "Nymphéas", "Oxygénation", "Périphérique", "Quadrupède", "Réfrigérateur",
-                    "Saxophone", "Tachymètre", "Ufologie", "Vulnérable", "Waterpolo",
-                    "Xénophile", "Yoga", "Zéphyr", "Antioxydant", "Barycentre", "Catastrophe",
-                    "Décapitation", "Extraterrestre", "Formidable", "Grammaire", "Hémisphère",
-                    "Idiosyncrasie", "Journalisme", "Kinesthésie", "Léthargie", "Métaphore",
-                    "Nébuleuse", "Orthographe", "Pantomime", "Quarantaine", "Rétrospective",
-                    "Schizophrénie", "Télépathie", "Utopique", "Vibraphone",
-                    "Xénon"
-};
-*/
-
-int sujet(){
-    int theme = 0;
-    int resultatscan;
-
-    do {
-        printf("Choisissez votre thème \n");
-        printf("1 - Animaux \n");
-        printf("2 - Ville \n");
-        printf("3 - Film \n");
-
-        resultatscan = scanf("%d", &theme);
-
-        if (resultatscan != 1) {
-            printf("Veuillez entrer un nombre valide.\n");
-            while (getchar() != '\n'); // Vide le tampon d'entrée tant que le caractère n'est pas recupérer par getchar
-            theme = 0; // Réinitialisez pour continuer la boucle
-            continue;}
-
-        if (theme < 1 || theme > 3) {
-            printf("Choix non valide. Veuillez choisir un thème entre 1 et 3.\n");
-            theme = 0; // Réinitialisez pour continuer la boucle
-            continue;}
-
-
-        switch (theme) {
-            case 1:
-                printf("Oh un passionné d'animaux!\n");
-                break;
-            case 2:
-                printf("Oh un connaisseur de ville!\n");
-                break;
-            case 3:
-                printf("Oh un expert en film!\n");
-                break;
-            default:
-                printf("Choix non valide. Veuillez choisir un thème entre 1 et 3.\n");
-                theme = 0; // Réinitialisez lvl pour que la boucle continue
-                break;
-        }
-    } while (theme == 0); // La boucle continue tant que lvl est 0
-
-    return theme;
-}
-
-int niveau_jeu() {
-    int lvl = 0;
-    int resultatscan;
-
-    do {
-        printf("Choisissez votre niveau de jeu \n");
-        printf("1 - Facile\n");
-        printf("2 - Moyen \n");
-        printf("3 - Difficile \n");
-        resultatscan = scanf("%d", &lvl);
-
-        if(resultatscan != 1){
-            printf("Veuillez entrer un nombre valide.\n");
-            while (getchar()!= '\n');
-            lvl = 0;
-            continue;
-        }
-
-        if (lvl < 1 || lvl > 3) {
-            printf("Choix non valide. Veuillez choisir un thème entre 1 et 3.\n");
-            lvl = 0; // Réinitialisez pour continuer la boucle
-            continue;
-        }
-
-
-
-        switch (lvl) {
-            case 1:
-                printf("Oh un petit débutant!\n");
-                break;
-            case 2:
-                printf("Oh un joueur moyen!\n");
-                break;
-            case 3:
-                printf("Oh un expert!!!!\n");
-                break;
-            default:
-                printf("Choix non valide. Veuillez choisir un niveau entre 1 et 3.\n");
-                lvl = 0; // Réinitialisez lvl pour que la boucle continue
-                break;
-        }
-    } while (lvl == 0); // La boucle continue tant que lvl est 0
-
-    return lvl;
-}
-
-
+/**
+ * @brief   Génère un mot aléatoire à partir d'un tableau de caractères en 2D.
+ *
+ *
+ * @param   tab   Un tableau 2D de caractères représentant une collection de mots.
+ *
+ *
+ * @return  Un pointeur vers une chaîne de caractères allouée dynamiquement contenant le mot sélectionné aléatoirement.
+ *
+ */
 char* Word(char tab[50][15])  //fonction "Word" retourne un pointeur prend en paramètre notre tableau
 {
     srand(time(NULL)); // initialisation de la fonction rand
-    int value = rand() % 51; // intervalle de la fonction 0-50
-    char* result = malloc(15 * sizeof(char)); /* allocation de mémoire 15 octets pour 15 caractères
- et création d'un pointeur result qui pointe vers notre chaine de caractère. free(result) à utiliser */
-    strncpy(result, tab[value], 14); // copie jusqu'à 14 caractères de value dans result
-    result[14] = '\0'; // confirmation de la fin de chaire de caractères
-    return result; // retourne pointeur
+    int value = rand() % 51;
+    char* result = malloc(15 * sizeof(char));
+    strncpy(result, tab[value], 14);
+    result[14] = '\0';
+    return result;
 }
+
+/**
+ * @brief   Initialise une chaîne de caractères masquée à partir d'une chaîne donnée.
+ *
+ *
+ * @param   res   Chaîne de caractères source à partir de laquelle la chaîne masquée est créée.
+ * @param   tmp   Chaîne de caractères masquée résultante.
+ *
+ *
+ */
 void Mot_Cache(char* res, char* tmp)
 {
     int L = strlen(res);
@@ -307,21 +161,33 @@ void Mot_Cache(char* res, char* tmp)
     tmp[L] = '\0';
 }
 
-void Settings(int theme,int lvl,char* res)
+/**
+ * @brief   genere le mot a deviner en fonction des paramètres du jeu thème et lvl choisis par le joueur .
+ *
+ * @details Cette fonction prend en compte le thème et le lvl  choisis, puis retourne
+ *          un mot caché correspondant à ces paramètres.
+ *
+ * @param   theme   Thème choisi (1: Animaux, 2: Villes, 3: Films).
+ * @param   lvl     Niveau choisi (1: Facile, 2: Moyen, 3: Difficile).
+ * @param   res     Chaîne de caractères où le mot caché generé sera stocké.
+ *
+ * @return  Un pointeur vers la chaîne de caractères représentant le mot caché.
+ */
+char* Settings(int theme,int lvl,char* res)
 {
     switch (theme) {
         case 1:
             switch (lvl) {
 
                 case 1:
-                    res = Word(animauxFacile);
+                    return res = Word(animauxFacile);
                     break;
 
                 case 2:
-                    res = Word(animauxMoyen);
+                    return res = Word(animauxMoyen);
                     break;
                 case 3:
-                    res = Word(animauxDifficile);
+                    return res = Word(animauxDifficile);
                     break;
 
                 default:
@@ -335,14 +201,14 @@ void Settings(int theme,int lvl,char* res)
             switch (lvl) {
 
                 case 1:
-                    res = Word(villesFacile);
+                    return res = Word(villesFacile);
                     break;
 
                 case 2:
-                    res = Word(villesMoyen);
+                    return res = Word(villesMoyen);
                     break;
                 case 3:
-                    res = Word(villesDifficile);
+                    return  res = Word(villesDifficile);
                     break;
                 default:
                     printf("Erreur causé au niveau du thème villes, des niveaux");
@@ -353,14 +219,14 @@ void Settings(int theme,int lvl,char* res)
             switch (lvl) {
 
                 case 1:
-                    res = Word(filmsFacile);
+                    return res = Word(filmsFacile);
                     break;
 
                 case 2:
-                    res = Word(filmsMoyen);
+                    return res = Word(filmsMoyen);
                     break;
                 case 3:
-                    res = Word(filmsDifficile);
+                    return res = Word(filmsDifficile);
                     break;
                 default:
                     printf("Erreur causé au niveau du thème films, des niveaux");
@@ -370,10 +236,24 @@ void Settings(int theme,int lvl,char* res)
     }
 }
 
-void deviner(char* res, char* tmp, bool* verif) {
-    char Lettre;
 
-    *verif = false;
+/**
+ * @brief   Fonction pour deviner une lettre dans un mot.
+ *
+ * @details Cette fonction demande à l'utilisateur de saisir une lettre et vérifie
+ *          si elle appartient au mot caché.
+ *          Elle verifie aussi si l'utilisateur a saisie une lettre valide
+ *          Elle met à jour la chaîne masquée en conséquence.
+ *
+ *
+ * @param   res   Chaîne de caractères représentant le mot caché.
+ * @param   tmp   Chaîne de caractères représentant le mot masqué, à mettre à jour.
+ *
+ * @return  true si la lettre était présente dans le mot, false sinon.
+ */
+bool deviner(char* res, char* tmp) {
+    char Lettre;
+    bool verif = false;
 
     printf("Saisir une lettre : \n");
 
@@ -398,15 +278,108 @@ void deviner(char* res, char* tmp, bool* verif) {
     for (int i = 0; i < strlen(res); i++) {
         if (Lettre == toupper(res[i])) {
             tmp[i] = res[i];
-            *verif = true;
+            verif = true;
+        }
+    }
+        if (!(verif)) {
+        printf("La lettre %c n'est pas dans le mot.\n", Lettre);
+    }
+   return verif;
+}
+
+/**
+ * @brief   Affiche et trie un tableau de scores.
+ *
+ * @details Cette fonction utilise le tri à bulles pour ordonner les scores
+ *          en ordre décroissant.
+ *          Elle utilise les fonctions de la lib raylib pour l'affichage d'un tableau de score dans une Window prédefinie.
+ *
+ * @param   Scores  Tableau de structures Track contenant les scores à afficher et à trier.
+ * @param   i       Nombre d'éléments dans le tableau Scores.
+ */
+void ScoresTable(struct Track *Scores, int i)
+{
+    // Tri à bulles pour ordonner les scores de best vers moins best
+    for (int j = 0; j < i - 1; j++)
+    {
+        for (int k = 0; k < i - j - 1; k++)
+        {
+            // Si le score actuel est inférieur au score suivant, échangez-les
+            if (Scores[k].score < Scores[k + 1].score)
+            {
+                // Échange des scores
+                struct Track temp = Scores[k];
+                Scores[k] = Scores[k + 1];
+                Scores[k + 1] = temp;
+            }
         }
     }
 
-    if (!(*verif)) {
-        printf("La lettre %c n'est pas dans le mot.\n", Lettre);
+    // Afficher les scores triés
+    DrawText("Scores Table : ", 50, 100, 20, BLACK);
+
+    // Draw the table headers
+    DrawRectangle(50, 140, 150, 30, GRAY);
+    DrawText("Game Number", 60, 145, 15, BLACK);
+    DrawRectangle(200, 140, 150, 30, GRAY);
+    DrawText("Score", 250, 145, 15, BLACK);
+
+    for (int j = 0; j < i; j++)
+    {
+        // Draw each row in the table
+        DrawRectangle(50, 170 + j * 40, 150, 30, LIGHTGRAY);
+        DrawText(TextFormat("%d", j + 1), 60, 175 + j * 40, 15, BLACK);
+
+        DrawRectangle(200, 170 + j * 40, 150, 30, LIGHTGRAY);
+        DrawText(TextFormat("%d", Scores[j].score), 250, 175 + j * 40, 15, BLACK);
     }
 }
 
+/**
+ * @brief   Dessine une illustration du pendu.
+ */
+void drawHangman()
+{
+    const int screenWidth = 800;
+    const int screenHeight = 600;
+    // base
+    DrawLine(screenWidth / 2 - 50, screenHeight / 2 + 100, screenWidth / 2 + 50, screenHeight / 2 + 100, BLACK);
+
+// Draw the pole
+    DrawLine(screenWidth / 2, screenHeight / 2 + 100, screenWidth / 2, screenHeight / 2 - 100, BLACK);
+
+// Draw the beam
+    DrawLine(screenWidth / 2, screenHeight / 2 - 100, screenWidth / 2 - 50, screenHeight / 2 - 100, BLACK);
+
+// Draw the rope
+    DrawLine(screenWidth / 2 - 50, screenHeight / 2 - 100, screenWidth / 2 - 50, screenHeight / 2 - 70, BLACK);
+
+// Draw the head
+    DrawCircle(screenWidth / 2 - 50, screenHeight / 2 - 70, 20, BLACK);
+
+// Draw the body
+    DrawLine(screenWidth / 2 - 50, screenHeight / 2 - 50, screenWidth / 2 - 50, screenHeight / 2 - 20, BLACK);
+
+// Draw the left arm
+    DrawLine(screenWidth / 2 - 50, screenHeight / 2 - 50, screenWidth / 2 - 40, screenHeight / 2 - 40, BLACK);
+
+// Draw the right arm
+    DrawLine(screenWidth / 2 - 50, screenHeight / 2 - 50, screenWidth / 2 - 60, screenHeight / 2 - 40, BLACK);
+
+// Draw the left leg
+    DrawLine(screenWidth / 2 - 50, screenHeight / 2 - 20, screenWidth / 2 - 40, screenHeight / 2 - 10, BLACK);
+
+// Draw the right leg
+    DrawLine(screenWidth / 2 - 50, screenHeight / 2 - 20, screenWidth / 2 - 60, screenHeight / 2 - 10, BLACK);
+}
+
+/**
+ * @brief   Dessine une représentation graphique du pendu en fonction du nombre de vies restantes.
+ *
+ * @details Cette fonction affiche différentes étapes du dessin du pendu en fonction du nombre de vies restantes.
+ *
+ * @param   life   Nombre de vies restantes pour le joueur.
+ */
 void dessine_pendu(int life ) {
     switch (life)
     {

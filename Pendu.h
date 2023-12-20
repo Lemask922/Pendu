@@ -8,12 +8,22 @@
 #include <string.h>
 #include<stdbool.h>
 #define MAX_LEN 15
-//#define life 6
 
-// Declaration of the global array
-// extern char tab1[100][MAX_LEN];
-// extern char tab2[100][MAX_LEN];
-// extern char tab3[100][MAX_LEN];
+
+struct Track
+{
+    int score ;
+};
+
+
+enum Windows {
+    WELCOME_Window,
+    LEVEL_SELECTION_Window,
+    Start_Window,
+    game_window,
+    ScoreWindow
+};
+
 extern char animauxFacile[50][MAX_LEN];
 extern char animauxMoyen[50][MAX_LEN];
 extern char animauxDifficile[50][MAX_LEN];
@@ -23,22 +33,15 @@ extern char villesDifficile[50][MAX_LEN];
 extern char filmsFacile[50][MAX_LEN];
 extern char filmsMoyen[50][MAX_LEN];
 extern char filmsDifficile[50][MAX_LEN];
+
 // Function declaration
 char* Word(char tab[50][MAX_LEN]);
 void Mot_Cache(char* res,char* tmp);
-void Settings(int theme,int lvl,char* res);
-void deviner(char* res, char* tmp, bool* verif);
+char* Settings(int theme,int lvl,char* res);
+bool deviner(char* res, char* tmp);
 void game(int i,char* res,char tmp[MAX_LEN + 1],int life,bool* verif);
+void drawHangman();
 void dessine_pendu(int life);
-int niveau_jeu();
-int sujet();
-
-
-enum GameState {
-    WELCOME_SCREEN,
-    LEVEL_SELECTION_SCREEN,
-    THIRD_WINDOW,
-    game_window
-};
+void ScoresTable(struct Track *Scores, int i);
 
 #endif //PENDU_PENDU_H
