@@ -12,6 +12,7 @@ int main(void) {
     InitWindow(screenWidth, screenHeight, "Bienvenu to Pendu");
 
     Texture2D backgroundImage = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/Background.png");
+
     if (backgroundImage.id == 0) {
         printf("Failed to load background image.\n");
         CloseWindow();
@@ -249,6 +250,8 @@ int main(void) {
                             printf("Score = %d\n",Scores[i].score);
                         } else {
                             printf("Désolé, vous avez épuisé toutes vos vies. Le mot était : %s\n", res);
+                            Scores[i].score = 0 ;
+                            printf("Score = %d\n",Scores[i].score);
                         }
 
                         i++;
