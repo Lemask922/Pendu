@@ -300,7 +300,11 @@ bool deviner(char* res, char* tmp) {
  */
 void ScoresTable(struct Track *Scores, int i)
 {
-    // Tri à bulles pour ordonner les scores de best vers moins best
+    Texture2D Gold = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/1.png");
+    Texture2D Silver = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/2.png");
+    Texture2D Bronze = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/3.png");
+
+        // Tri à bulles pour ordonner les scores de best vers moins best
     for (int j = 0; j < i - 1; j++)
     {
         for (int k = 0; k < i - j - 1; k++)
@@ -321,14 +325,34 @@ void ScoresTable(struct Track *Scores, int i)
 
     // Draw the table headers
     DrawRectangle(20, 140, 150, 30, GRAY);
-    DrawText("Game Number", 30, 145, 15, BLACK);
+    DrawText("Classement", 30, 145, 15, BLACK);
     DrawRectangle(170, 140, 150, 30, GRAY);
     DrawText("Score", 230, 145, 15, BLACK);
 
     for (int j = 0; j < i; j++)
     {
         // Draw each row in the table
-        DrawRectangle(20, 170 + j * 40, 150, 30, LIGHTGRAY);
+        Rectangle rect = {20 ,170 + j * 40, 150, 30};
+        DrawRectangleRec(rect, LIGHTGRAY);
+if(j == 0) {
+    // Draw the trophy texture at the center of the first row
+    DrawTextureRec(Gold, (Rectangle) {0, 0, Gold.width, Gold.height},
+                   (Vector2) {rect.x + rect.width / 2 - Gold.width / 2,
+                              rect.y + rect.height / 2 - Gold.height / 2},
+                   WHITE);
+}else if (j == 1)
+{
+    DrawTextureRec(Silver, (Rectangle) {0, 0, Silver.width, Silver.height},
+                   (Vector2) {rect.x + rect.width / 2 - Silver.width / 2,
+                              rect.y + rect.height / 2 - Silver.height / 2},
+                   WHITE);
+}else if(j == 2)
+{
+    DrawTextureRec(Bronze, (Rectangle) {0, 0, Bronze.width, Bronze.height},
+                   (Vector2) {rect.x + rect.width / 2 - Bronze.width / 2,
+                              rect.y + rect.height / 2 - Bronze.height / 2},
+                   WHITE);
+}
         DrawText(TextFormat("%d", j + 1), 60, 175 + j * 40, 15, BLACK);
 
         DrawRectangle(170, 170 + j * 40, 150, 30, LIGHTGRAY);
