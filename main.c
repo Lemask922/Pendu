@@ -14,9 +14,10 @@ int main(void) {
     Texture2D backgroundImage = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/Background.png");
     if (backgroundImage.id == 0) {
         printf("Failed to load background image.\n");
-        CloseWindow();  // Close the window on error
-        return -1;      // Exit the program with an error code
-    }
+        CloseWindow();
+        return -1;
+    } // Boucle utilisé pour verifier si l'image est correctement loader
+      // un utilisateur pourra avoir besoin si il a des problemes avec le background image
 
 
     char name[MAX_INPUT_CHARS + 1] = "\0";
@@ -49,6 +50,8 @@ int main(void) {
     int letterCount2 = 0;
     int framesCounter = 0;
     int framesCounter2 = 0;
+
+    float roundness = 0.4f;
 
     enum Windows Window = WELCOME_Window;
 
@@ -85,7 +88,7 @@ int main(void) {
                 DrawText("- Vous avez 6 vies. Chaque supposition incorrecte coûte une vie.", 50, 210, 20, WHITE);
                 DrawText("- Essayez de deviner le mot avant de manquer de vies.", 50, 240, 20, WHITE);
 
-                DrawRectangleRec(startButton, LIGHTGRAY);
+                DrawRectangleRounded(startButton,roundness,0, DARKBLUE);
                 DrawText("Start Game", startButton.x + 40, startButton.y + 10, 20, BLACK);
                 break;
 
@@ -94,7 +97,7 @@ int main(void) {
 
                 if (CheckCollisionPointRec(GetMousePosition(), inputBox)) mouseOnText = true;
                 else mouseOnText = false;
-                DrawRectangleRec(inputBox, LIGHTGRAY);
+                DrawRectangleRounded(inputBox,roundness,0, DARKBLUE);
 
                 if (mouseOnText) {
 
@@ -143,9 +146,9 @@ int main(void) {
                 DrawText("2 - Moyen", 50, 180, 20, WHITE);
                 DrawText("3 - Difficile", 50, 210, 20, WHITE);
                 DrawText(name, (int) inputBox.x + 5, (int) inputBox.y + 10, 20, WHITE);
-                DrawRectangleRec(OkButton, LIGHTGRAY);
+                DrawRectangleRounded(OkButton,roundness, 0,DARKBLUE);
 
-                DrawText("Ok", (int) OkButton.x + 40, (int) OkButton.y + 10, 20, BLACK);
+                DrawText("Valider", (int) OkButton.x + 60, (int) OkButton.y + 10, 20, BLACK);
                 if (mouseOnText) framesCounter++;
                 break;
 
@@ -154,7 +157,7 @@ int main(void) {
 
                 if (CheckCollisionPointRec(GetMousePosition(), inputBoxTheme)) mouseOnText2 = true;
                 else mouseOnText2 = false;
-                DrawRectangleRec(inputBoxTheme, LIGHTGRAY);
+                DrawRectangleRounded(inputBoxTheme, roundness,0,DARKBLUE);
 
                 if (mouseOnText2) {
 
@@ -196,9 +199,9 @@ int main(void) {
                 DrawText("1 - Animaux",50,150,20,WHITE);
                 DrawText("2 - Ville",50,180,20,WHITE);
                 DrawText("3 - Film",50,210,20,WHITE);
-                DrawRectangleRec(OKButtonTheme, LIGHTGRAY);
+                DrawRectangleRounded(OKButtonTheme,roundness,0, DARKBLUE);
                 DrawText(name2,(int) inputBoxTheme.x + 5, (int) inputBoxTheme.y + 10, 20, WHITE);
-                DrawText("Ok", (int) OKButtonTheme.x + 40, (int) OKButtonTheme.y + 10, 20, WHITE);
+                DrawText("Valider", (int) OKButtonTheme.x + 60, (int) OKButtonTheme.y + 10, 20, BLACK);
                 if (mouseOnText2) framesCounter2++;
                 break;
                 break;
@@ -206,7 +209,7 @@ int main(void) {
             case game_window:
                 backgroundImage = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/Background.png");
 
-                DrawRectangleRec(StartGuess,LIGHTGRAY);
+                DrawRectangleRounded(StartGuess,roundness,0,DARKBLUE);
                 DrawText("Start guessing", (int)(StartGuess.x + (StartGuess.width - MeasureText("Start guessing", 20)) / 2), (int)(StartGuess.y + StartGuess.height / 2 - 10), 20, BLACK);
                 if (CheckCollisionPointRec(GetMousePosition(), StartGuess) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
                     startguess = true;
@@ -267,10 +270,9 @@ int main(void) {
                     }
                 }
 
-            break;
+                break;
             case ScoreWindow:
                 backgroundImage = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/Background.png");
-
                 ScoresTable(Scores,i);
                 break;
         }

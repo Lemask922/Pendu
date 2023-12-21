@@ -293,7 +293,7 @@ bool deviner(char* res, char* tmp) {
  *
  * @details Cette fonction utilise le tri à bulles pour ordonner les scores
  *          en ordre décroissant.
- *          Elle utilise les fonctions de la lib raylib pour l'affichage d'un tableau de score dans une Window prédefinie.
+ *          Elle utilise les fonctions de la lib raylib pour l'affichage d'un tableau de score dans une fenetre prédefinie.
  *
  * @param   Scores  Tableau de structures Track contenant les scores à afficher et à trier.
  * @param   i       Nombre d'éléments dans le tableau Scores.
@@ -323,7 +323,6 @@ void ScoresTable(struct Track *Scores, int i)
     // Afficher les scores triés
     DrawText("Scores Table : ", 20, 100, 20, WHITE);
 
-    // Draw the table headers
     DrawRectangle(20, 140, 150, 30, GRAY);
     DrawText("Classement", 30, 145, 15, BLACK);
     DrawRectangle(170, 140, 150, 30, GRAY);
@@ -331,11 +330,9 @@ void ScoresTable(struct Track *Scores, int i)
 
     for (int j = 0; j < i; j++)
     {
-        // Draw each row in the table
         Rectangle rect = {20 ,170 + j * 40, 150, 30};
-        DrawRectangleRec(rect, LIGHTGRAY);
+        DrawRectangleRec(rect, DARKGRAY);
 if(j == 0) {
-    // Draw the trophy texture at the center of the first row
     DrawTextureRec(Gold, (Rectangle) {0, 0, Gold.width, Gold.height},
                    (Vector2) {rect.x + rect.width / 2 - Gold.width / 2,
                               rect.y + rect.height / 2 - Gold.height / 2},
@@ -354,48 +351,11 @@ if(j == 0) {
                    WHITE);
 }
         DrawText(TextFormat("%d", j + 1), 60, 175 + j * 40, 15, BLACK);
-
-        DrawRectangle(170, 170 + j * 40, 150, 30, LIGHTGRAY);
+        DrawRectangle(170, 170 + j * 40, 150, 30, DARKGRAY);
         DrawText(TextFormat("%d", Scores[j].score), 250, 175 + j * 40, 15, BLACK);
     }
-}
 
-/**
- * @brief   Dessine une illustration du pendu.
- */
-void drawHangman()
-{
-    const int screenWidth = 800;
-    const int screenHeight = 600;
-    // base
-    DrawLine(screenWidth / 2 - 50, screenHeight / 2 + 100, screenWidth / 2 + 50, screenHeight / 2 + 100, BLACK);
 
-// Draw the pole
-    DrawLine(screenWidth / 2, screenHeight / 2 + 100, screenWidth / 2, screenHeight / 2 - 100, BLACK);
-
-// Draw the beam
-    DrawLine(screenWidth / 2, screenHeight / 2 - 100, screenWidth / 2 - 50, screenHeight / 2 - 100, BLACK);
-
-// Draw the rope
-    DrawLine(screenWidth / 2 - 50, screenHeight / 2 - 100, screenWidth / 2 - 50, screenHeight / 2 - 70, BLACK);
-
-// Draw the head
-    DrawCircle(screenWidth / 2 - 50, screenHeight / 2 - 70, 20, BLACK);
-
-// Draw the body
-    DrawLine(screenWidth / 2 - 50, screenHeight / 2 - 50, screenWidth / 2 - 50, screenHeight / 2 - 20, BLACK);
-
-// Draw the left arm
-    DrawLine(screenWidth / 2 - 50, screenHeight / 2 - 50, screenWidth / 2 - 40, screenHeight / 2 - 40, BLACK);
-
-// Draw the right arm
-    DrawLine(screenWidth / 2 - 50, screenHeight / 2 - 50, screenWidth / 2 - 60, screenHeight / 2 - 40, BLACK);
-
-// Draw the left leg
-    DrawLine(screenWidth / 2 - 50, screenHeight / 2 - 20, screenWidth / 2 - 40, screenHeight / 2 - 10, BLACK);
-
-// Draw the right leg
-    DrawLine(screenWidth / 2 - 50, screenHeight / 2 - 20, screenWidth / 2 - 60, screenHeight / 2 - 10, BLACK);
 }
 
 /**
