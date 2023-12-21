@@ -7,7 +7,7 @@
 #include<string.h>
 #include <time.h>
 #include <ctype.h>
-#include "/Users/abouda/Desktop/Esiea/Project CCCCCC/raylib-master/src/raylib.h"
+#include "raylib.h"
 
 
 //Thème ANIMAUX
@@ -122,6 +122,7 @@ char filmsDifficile[50][15] = {
         "Léon", "Wasabi", "Lucy", "Family", "Gandahar",
         "Time Masters", "Fantastic P", "Delicatessen", "City Lost Ch", "Amélie"
 };
+
 /**
  * @brief   Génère un mot aléatoire à partir d'un tableau de caractères en 2D.
  *
@@ -316,21 +317,21 @@ void ScoresTable(struct Track *Scores, int i)
     }
 
     // Afficher les scores triés
-    DrawText("Scores Table : ", 50, 100, 20, BLACK);
+    DrawText("Scores Table : ", 20, 100, 20, WHITE);
 
     // Draw the table headers
-    DrawRectangle(50, 140, 150, 30, GRAY);
-    DrawText("Game Number", 60, 145, 15, BLACK);
-    DrawRectangle(200, 140, 150, 30, GRAY);
-    DrawText("Score", 250, 145, 15, BLACK);
+    DrawRectangle(20, 140, 150, 30, GRAY);
+    DrawText("Game Number", 30, 145, 15, BLACK);
+    DrawRectangle(170, 140, 150, 30, GRAY);
+    DrawText("Score", 230, 145, 15, BLACK);
 
     for (int j = 0; j < i; j++)
     {
         // Draw each row in the table
-        DrawRectangle(50, 170 + j * 40, 150, 30, LIGHTGRAY);
+        DrawRectangle(20, 170 + j * 40, 150, 30, LIGHTGRAY);
         DrawText(TextFormat("%d", j + 1), 60, 175 + j * 40, 15, BLACK);
 
-        DrawRectangle(200, 170 + j * 40, 150, 30, LIGHTGRAY);
+        DrawRectangle(170, 170 + j * 40, 150, 30, LIGHTGRAY);
         DrawText(TextFormat("%d", Scores[j].score), 250, 175 + j * 40, 15, BLACK);
     }
 }

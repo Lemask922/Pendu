@@ -1,30 +1,36 @@
 #include<stdio.h>
-#include <stdio.h>
 #include"Pendu.h"
-
 #include<string.h>
-#include "/Users/abouda/Desktop/Esiea/Project CCCCCC/raylib-master/src/raylib.h"
+#include "raylib.h"
 #define MAX_INPUT_CHARS 1
 
 
 int main(void) {
-    const int screenWidth = 800;
+    const int screenWidth = 1050;
     const int screenHeight = 600;
 
     InitWindow(screenWidth, screenHeight, "Bienvenu to Pendu");
+
+    Texture2D backgroundImage = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/Background.png");
+    if (backgroundImage.id == 0) {
+        printf("Failed to load background image.\n");
+        CloseWindow();  // Close the window on error
+        return -1;      // Exit the program with an error code
+    }
+
 
     char name[MAX_INPUT_CHARS + 1] = "\0";
     char name2[MAX_INPUT_CHARS + 1] = "\0";
     char* res;
     char tmp[MAX_LEN + 1];
 
-    Rectangle inputBox = {screenWidth / 2 - 100, screenHeight / 2 - 20, 200, 40};
-    Rectangle inputBoxTheme = {screenWidth / 2 - 100, screenHeight / 2 - 20, 200, 40};
-    Rectangle StartGuess = {screenWidth / 2 - 100, screenHeight - 60, 200, 40};
+    Rectangle inputBox = {screenWidth / 2 - 150, screenHeight / 2 + 140, 200, 40};
+    Rectangle inputBoxTheme = {screenWidth / 2 - 150, screenHeight / 2 + 140, 200, 40};
+    Rectangle StartGuess = {screenWidth / 2 - 150, screenHeight - 60, 200, 40};
     Rectangle InputLetterBox = {screenWidth / 2 - 100, screenHeight / 2 - 20 - 40, 200, 40};
     Rectangle startButton = {50, 300, 200, 50};
-    Rectangle OkButton = {screenWidth / 2 - 100, screenHeight / 2 - 20 + 50, 200, 40};
-    Rectangle OKButtonTheme = {screenWidth / 2 - 100, screenHeight / 2 - 20 + 50, 200, 40};
+    Rectangle OkButton = {screenWidth / 2 - 150, screenHeight / 2 + 200, 200, 40};
+    Rectangle OKButtonTheme = {screenWidth / 2 - 150, screenHeight / 2 + 200, 200, 40};
 
     bool startGame = false;
     bool startguess = false;
@@ -51,8 +57,15 @@ int main(void) {
     while (!WindowShouldClose()) {
         BeginDrawing();
         ClearBackground(RAYWHITE);
+
+
+        // Draw the background texture with scaling
+        DrawTexture(backgroundImage, 0, 0, WHITE);
+
         switch (Window) {
             case WELCOME_Window:
+                backgroundImage = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/Background.png");
+
                 if (CheckCollisionPointRec(GetMousePosition(), startButton) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
                     startGame = true;
                 }
@@ -62,20 +75,22 @@ int main(void) {
 
                     CloseWindow();
                     InitWindow(screenWidth, screenHeight, "Difficulty");
+
                     SetTargetFPS(60);
                 }
 
-                DrawText("Bienvenue au Pendu", 50, 100, 30, BLACK);
-                DrawText("Instructions:", 50, 150, 20, BLACK);
-                DrawText("- Devinez le mot caché en entrant des lettres", 50, 180, 20, BLACK);
-                DrawText("- Vous avez 6 vies. Chaque supposition incorrecte coûte une vie.", 50, 210, 20, BLACK);
-                DrawText("- Essayez de deviner le mot avant de manquer de vies.", 50, 240, 20, BLACK);
+                DrawText("Bienvenue au Pendu", 50, 100, 30, WHITE);
+                DrawText("Instructions:", 50, 150, 20, WHITE);
+                DrawText("- Devinez le mot caché en entrant des lettres", 50, 180, 20, WHITE);
+                DrawText("- Vous avez 6 vies. Chaque supposition incorrecte coûte une vie.", 50, 210, 20, WHITE);
+                DrawText("- Essayez de deviner le mot avant de manquer de vies.", 50, 240, 20, WHITE);
 
                 DrawRectangleRec(startButton, LIGHTGRAY);
                 DrawText("Start Game", startButton.x + 40, startButton.y + 10, 20, BLACK);
                 break;
 
             case LEVEL_SELECTION_Window:
+                 backgroundImage = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/Background.png");
 
                 if (CheckCollisionPointRec(GetMousePosition(), inputBox)) mouseOnText = true;
                 else mouseOnText = false;
@@ -122,11 +137,12 @@ int main(void) {
                     InitWindow(screenWidth, screenHeight, "Theme");
                     SetTargetFPS(60);
                 }
-                DrawText("Choisissez votre niveau de jeu", 50, 100, 20, BLACK);
-                DrawText("1 - Facile", 50, 150, 20, BLACK);
-                DrawText("2 - Moyen", 50, 180, 20, BLACK);
-                DrawText("3 - Difficile", 50, 210, 20, BLACK);
-                DrawText(name, (int) inputBox.x + 5, (int) inputBox.y + 10, 20, BLACK);
+
+                DrawText("Choisissez votre niveau de jeu", 50, 100, 20, WHITE);
+                DrawText("1 - Facile", 50, 150, 20, WHITE);
+                DrawText("2 - Moyen", 50, 180, 20, WHITE);
+                DrawText("3 - Difficile", 50, 210, 20, WHITE);
+                DrawText(name, (int) inputBox.x + 5, (int) inputBox.y + 10, 20, WHITE);
                 DrawRectangleRec(OkButton, LIGHTGRAY);
 
                 DrawText("Ok", (int) OkButton.x + 40, (int) OkButton.y + 10, 20, BLACK);
@@ -134,6 +150,7 @@ int main(void) {
                 break;
 
             case Start_Window:
+                backgroundImage = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/Background.png");
 
                 if (CheckCollisionPointRec(GetMousePosition(), inputBoxTheme)) mouseOnText2 = true;
                 else mouseOnText2 = false;
@@ -175,21 +192,22 @@ int main(void) {
                     InitWindow(screenWidth, screenHeight, "Game");
                     SetTargetFPS(60);
                 }
-                DrawText("Choisissez votre thème ", 50, 100, 20, BLACK);
-                DrawText("1 - Animaux",50,150,20,BLACK);
-                DrawText("2 - Ville",50,180,20,BLACK);
-                DrawText("3 - Film",50,210,20,BLACK);
+                DrawText("Choisissez votre thème ", 50, 100, 20, WHITE);
+                DrawText("1 - Animaux",50,150,20,WHITE);
+                DrawText("2 - Ville",50,180,20,WHITE);
+                DrawText("3 - Film",50,210,20,WHITE);
                 DrawRectangleRec(OKButtonTheme, LIGHTGRAY);
-                DrawText(name2,(int) inputBoxTheme.x + 5, (int) inputBoxTheme.y + 10, 20, BLACK);
-                DrawText("Ok", (int) OKButtonTheme.x + 40, (int) OKButtonTheme.y + 10, 20, BLACK);
+                DrawText(name2,(int) inputBoxTheme.x + 5, (int) inputBoxTheme.y + 10, 20, WHITE);
+                DrawText("Ok", (int) OKButtonTheme.x + 40, (int) OKButtonTheme.y + 10, 20, WHITE);
                 if (mouseOnText2) framesCounter2++;
                 break;
                 break;
 
             case game_window:
+                backgroundImage = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/Background.png");
+
                 DrawRectangleRec(StartGuess,LIGHTGRAY);
                 DrawText("Start guessing", (int)(StartGuess.x + (StartGuess.width - MeasureText("Start guessing", 20)) / 2), (int)(StartGuess.y + StartGuess.height / 2 - 10), 20, BLACK);
-                drawHangman();
                 if (CheckCollisionPointRec(GetMousePosition(), StartGuess) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
                     startguess = true;
                 }
@@ -251,6 +269,8 @@ int main(void) {
 
             break;
             case ScoreWindow:
+                backgroundImage = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/Background.png");
+
                 ScoresTable(Scores,i);
                 break;
         }
@@ -258,6 +278,7 @@ int main(void) {
         EndDrawing();
 
     }
+    UnloadTexture(backgroundImage);  // Unload background texture
 
     CloseWindow();
 
