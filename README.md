@@ -10,4 +10,6 @@ Voici notre projet du jen pendu en C!
 
 Merci
 
+
+
 ![image](https://github.com/Lemask922/Pendu/assets/106203416/fdadf3af-cb30-404d-84ab-0270cdd87e8a)
