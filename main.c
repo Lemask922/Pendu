@@ -11,7 +11,7 @@ int main(void) {
 
     InitWindow(screenWidth, screenHeight, "Bienvenu to Pendu");
 
-    Texture2D backgroundImage = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/Background.png");
+    Texture2D backgroundImage = LoadTexture("D:\\oussa\\Documents\\ESIEA\\Cours\\INFO C\\pROJET c\\Pendu\\Background.png");
 
     if (backgroundImage.id == 0) {
         printf("Failed to load background image.\n");
@@ -68,7 +68,7 @@ int main(void) {
 
         switch (Window) {
             case WELCOME_Window:
-                backgroundImage = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/Background.png");
+                backgroundImage = LoadTexture("D:\\oussa\\Documents\\ESIEA\\Cours\\INFO C\\pROJET c\\Pendu\\Background.png");
 
                 if (CheckCollisionPointRec(GetMousePosition(), startButton) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
                     startGame = true;
@@ -94,7 +94,7 @@ int main(void) {
                 break;
 
             case LEVEL_SELECTION_Window:
-                 backgroundImage = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/Background.png");
+                 backgroundImage = LoadTexture("D:\\oussa\\Documents\\ESIEA\\Cours\\INFO C\\pROJET c\\Pendu\\Background.png");
 
                 if (CheckCollisionPointRec(GetMousePosition(), inputBox)) mouseOnText = true;
                 else mouseOnText = false;
@@ -154,7 +154,7 @@ int main(void) {
                 break;
 
             case Start_Window:
-                backgroundImage = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/Background.png");
+                backgroundImage = LoadTexture("D:\\oussa\\Documents\\ESIEA\\Cours\\INFO C\\pROJET c\\Pendu\\Background.png");
 
                 if (CheckCollisionPointRec(GetMousePosition(), inputBoxTheme)) mouseOnText2 = true;
                 else mouseOnText2 = false;
@@ -208,7 +208,7 @@ int main(void) {
                 break;
 
             case game_window:
-                backgroundImage = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/Background.png");
+                backgroundImage = LoadTexture("D:\\oussa\\Documents\\ESIEA\\Cours\\INFO C\\pROJET c\\Pendu\\Background.png");
 
                 DrawRectangleRounded(StartGuess,roundness,0,DARKBLUE);
                 DrawText("Start guessing", (int)(StartGuess.x + (StartGuess.width - MeasureText("Start guessing", 20)) / 2), (int)(StartGuess.y + StartGuess.height / 2 - 10), 20, BLACK);
@@ -227,8 +227,8 @@ int main(void) {
                         printf("Game %d \n",i);
                         Mot_Cache(res, tmp); // cacher le mot
                         printf("%s\n", tmp);
-                        printf("%s\n",res);
                         life = 6;
+                        printf("%s\n", res);
                         Scores = realloc(Scores, (i +1 ) * sizeof(struct Track));// allouer dynamiquement Scores a chaque fois le joueur joue une nouvelle partie
 
                         while (life > 0 && strcmp(res, tmp) != 0) {
@@ -236,9 +236,15 @@ int main(void) {
                             verif = deviner(res, tmp);
                             printf("%s\n", tmp);
 
+
                             if (!verif) {
                                 life--;
                                 printf("Il vous reste %d vies.\n", life);
+                            }
+                            if (life ==0){
+
+                                dessine_pendu(life);
+
                             }
 
                         }
@@ -275,7 +281,7 @@ int main(void) {
 
                 break;
             case ScoreWindow:
-                backgroundImage = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/Background.png");
+                backgroundImage = LoadTexture("D:\\oussa\\Documents\\ESIEA\\Cours\\INFO C\\pROJET c\\Pendu\\Background.png");
                 ScoresTable(Scores,i);
                 break;
         }

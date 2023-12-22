@@ -16,36 +16,36 @@ char animauxFacile[50][15] = {
         "Canard", "Oie", "Cochon", "Vache", "Mouton",
         "Chèvre", "Biche", "Cerf", "Renard", "Lion",
         "Tigre", "Ours", "Panda", "Léopard", "Girafe",
-        "Zèbre", "Éléphant", "Hippopotame", "Kangourou", "Koala",
+        "Zebre", "Elephant", "Hippopotame", "Kangourou", "Koala",
         "Paresseux", "Fourmi", "Abeille", "Mouche", "Papillon",
-        "Escargot", "Grenouille", "Tortue", "Lézard", "Serpent",
+        "Escargot", "Grenouille", "Tortue", "Lezard", "Serpent",
         "Crocodile", "Perroquet", "Canari", "Hibou", "Faucon",
-        "Pie", "Corbeau", "Mouette", "Goéland", "Pigeon",
+        "Pie", "Corbeau", "Mouette", "Goeland", "Pigeon",
         "Colombe", "Dindon", "Paon", "Faisan", "Cygne"
 };
 char animauxMoyen[50][15] = {
-        "Antilope", "Babouin", "Carcajou", "Dromadaire", "Écureuil",
-        "Flamant", "Gorille", "Hérisson", "Iguane", "Jaguar",
+        "Antilope", "Babouin", "Carcajou", "Dromadaire", "Ecureuil",
+        "Flamant", "Gorille", "Herisson", "Iguane", "Jaguar",
         "Kiwi", "Lama", "Mandrill", "Narval", "Orang-outan",
-        "Pangolin", "Quokka", "Rhinocéros", "Saïmiri", "Tapir",
-        "Uakari", "Varan", "Wallaby", "Xérus", "Yack",
+        "Pangolin", "Quokka", "Rhinoceros", "Saïmiri", "Tapir",
+        "Uakari", "Varan", "Wallaby", "Xerus", "Yack",
         "Zorille", "Axolotl", "Bison", "Capybara", "Dugong",
         "Fennec", "Grizzly", "Hamster", "Impala", "Jabiru",
         "Kouprey", "Loris", "Marmotte", "Numbat", "Ocelot",
         "Potorou", "Quetzal", "Requin", "Serval", "Tamanoir",
-        "Urubu", "Vautour", "Wombat", "Xénarthre", "Yéti"
+        "Urubu", "Vautour", "Wombat", "Xenarthre", "Yeti"
 };
 char animauxDifficile[50][15] = {
-        "Anhinga", "Balbuzard", "Cacatoès", "Daman", "Échidné",
+        "Anhinga", "Balbuzard", "Cacatoès", "Daman", "echidne",
         "Fouine", "Galago", "Hocco", "Indri", "Jacamar",
-        "Kakapo", "Loir", "Manchot", "Narval", "Oryctérope",
-        "Pécari", "Quokka", "Ratel", "Sarigue", "Tatou",
-        "Urial", "Vipère", "Wapiti", "Xérus", "Yapok",
+        "Kakapo", "Loir", "Manchot", "Narval", "Orycterope",
+        "Pecari", "Quokka", "Ratel", "Sarigue", "Tatou",
+        "Urial", "Vipère", "Wapiti", "Xerus", "Yapok",
         "Zibeline", "Aye-aye", "Blaireau", "Coendou", "Dik-dik",
         "Elan", "Fossa", "Gibbon", "Hydre", "Ibex",
         "Jaguarundi", "Kinkajou", "Loutre", "Mouflon", "Nyala",
         "Oribi", "Pudu", "Quoll", "Roussette", "Sitatunga",
-        "Takin", "Uranoscope", "Vicogne", "Wallaroo", "Xénops"
+        "Takin", "Uranoscope", "Vicogne", "Wallaroo", "Xenops"
 };
 
 //Thème Ville
@@ -55,7 +55,7 @@ char villesFacile[50][15] = {
         "Montpellier", "Dijon", "Rouen", "Nancy", "Metz",
         "Reims", "Tours", "Clermont", "Grenoble", "Angers",
         "Le Mans", "Brest", "Limoges", "Amiens", "Perpignan",
-        "Orléans", "Caen", "Mulhouse", "Roubaix", "Boulogne",
+        "Orleans", "Caen", "Mulhouse", "Roubaix", "Boulogne",
         "Toulon", "Avignon", "Poitiers", "Versailles", "Nanterre",
         "Pau", "Colmar", "Bayonne", "Brive", "Calais",
         "Beziers", "Arles", "Biarritz", "Cannes", "Dieppe",
@@ -65,7 +65,7 @@ char villesMoyen[50][15] = {
         "Aberdeen", "Bilbao", "Cordoue", "Dresde", "Essen",
         "Florence", "Gand", "Hambourg", "Innsbruck", "Jerez",
         "Kiev", "Lisbonne", "Malaga", "Naples", "Ostende",
-        "Palermo", "Quebec", "Rennes", "Séville", "Turin",
+        "Palermo", "Quebec", "Rennes", "Seville", "Turin",
         "Utrecht", "Venise", "Warsaw", "Xanten", "York",
         "Zurich", "Albi", "Braga", "Cremona", "Delft",
         "Erfurt", "Forli", "Girona", "Huesca", "Irun",
@@ -87,13 +87,13 @@ char villesDifficile[50][15] = {
 };
 //thème FILM
 char filmsFacile[50][15] = {
-        "Intouchables", "Amélie", "La La Land", "Avatar", "Titanic",
-        "Gladiator", "Inception", "Matrix", "Fight Club", "Léon",
+        "Intouchables", "Amelie", "La La Land", "Avatar", "Titanic",
+        "Gladiator", "Inception", "Matrix", "Fight Club", "Leon",
         "Le Pianiste", "Memento", "Seven", "Alien", "Forrest Gump",
         "Braveheart", "Coco", "Wall-E", "Up", "Ratatouille",
         "Shrek", "Toy Story", "Cars", "Frozen", "Zootopie",
         "Joker", "Skyfall", "Dunkerque", "Gran Torino", "Interstellar",
-        "Les Misérables", "Parasite", "Juno", "Moonlight", "Birdman",
+        "Les Miserables", "Parasite", "Juno", "Moonlight", "Birdman",
         "Gravity", "Sully", "Fargo", "Her", "Arrival",
         "Whiplash", "Boyhood", "Drive", "Gone Girl", "Sicario",
         "Django", "Lincoln", "Hugo", "Argo", "Spotlight"
@@ -112,15 +112,15 @@ char filmsMoyen[50][15] = {
 };
 char filmsDifficile[50][15] = {
         "Mulholland", "Atonement", "Revolutiona", "Blood Diamond", "No Country",
-        "Lost in Trans", "The Master", "Mystic River", "Blue Velvet", "Mullholland",
-        "Under Skin", "Melancholia", "Dogville", "Biutiful", "Inherent Vice",
-        "21 Grams", "Eternal Sun", "Science Sleep", "Be Kind Rewind", "Mood Indigo",
-        "Green Ray", "Golden Days", "Umbrellas", "Holy Motors", "Lovers Bridge",
-        "Pola X", "Irreversible", "Enter Void", "Climax", "Love",
-        "Fifth Element", "Valerian", "Lucy", "Angel-A", "Big Blue",
+        "Lost", "The Master", "Mystic River", "Blue Velvet", "Mullholland",
+        "UnderSkin", "Melancholia", "Dogville", "Biutiful", "Inherent Vice",
+        "Grams", "Eternal Sun", "Science Sleep", "Be Kind Rewind", "Mood Indigo",
+        "GreenRay", "Golden Days", "Umbrellas", "Holy Motors", "Lovers Bridge",
+        "PolaX", "Irreversible", "Enter Void", "Climax", "Love",
+        "Fifth Element", "Valerian", "Lucy", "AngelA", "BigBlue",
         "Subway", "Atlantis", "Nikita", "Leon", "Ronin",
-        "Léon", "Wasabi", "Lucy", "Family", "Gandahar",
-        "Time Masters", "Fantastic P", "Delicatessen", "City Lost Ch", "Amélie"
+        "Leon", "Wasabi", "Lucy", "Family", "Gandahar",
+        "Time Masters", "Fantastic P", "Delicatesse", "CityLost", "Amelie"
 };
 
 /**
@@ -300,9 +300,9 @@ bool deviner(char* res, char* tmp) {
  */
 void ScoresTable(struct Track *Scores, int i)
 {
-    Texture2D Gold = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/1.png");
-    Texture2D Silver = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/2.png");
-    Texture2D Bronze = LoadTexture("/Users/abouda/Desktop/Esiea/Project CCCCCC/Pendu/3.png");
+    Texture2D Gold = LoadTexture("D:\\oussa\\Documents\\ESIEA\\Cours\\INFO C\\pROJET c\\Pendu\\1.png");
+    Texture2D Silver = LoadTexture("D:\\oussa\\Documents\\ESIEA\\Cours\\INFO C\\pROJET c\\Pendu\\2.png");
+    Texture2D Bronze = LoadTexture("D:\\oussa\\Documents\\ESIEA\\Cours\\INFO C\\pROJET c\\Pendu\\3.png");
 
         // Tri à bulles pour ordonner les scores de best vers moins best
     for (int j = 0; j < i - 1; j++)
